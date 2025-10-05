@@ -1,0 +1,265 @@
+<!-- TODO: Replace PASTE_WEB_APP_URL with your Apps Script Web App URL, CHANGE_ME_32CHARS with your secret token, and YOUR-DOMAIN with your domain. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AutoSpa Express Guildford — Premium Mobile Detailing</title>
+<meta name="description" content="Premium mobile car detailing across Surrey. Valets, machine polishing, ceramic coating with warranty. 24/7.">
+<style>
+  :root { --accent:#d4af37; --bg:#000; --fg:#fff; --muted:#d9d9d9; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif; background:var(--bg); color:var(--fg); }
+  a { color: var(--fg); }
+  /* Hero */
+  header.hero { position:relative; min-height:62vh; display:grid; place-items:center; text-align:center; overflow:hidden; }
+  header.hero::before {
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.35)), url('1000300802 (1).jpg') center/cover no-repeat;
+    filter:saturate(1.1);
+    transform:translateZ(0);
+  }
+  header .inner { position:relative; z-index:1; padding:40px 16px; }
+  h1 { margin:0 0 8px; font-size:40px; }
+  .sub { color:var(--muted); font-size:14px; }
+  .cta { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:14px; }
+  .btn { padding:12px 16px; border-radius:12px; border:1px solid rgba(255,255,255,.25); background:#fff; color:#000; text-decoration:none; font-weight:700; }
+  .btn.gold { background:var(--accent); border-color:var(--accent); color:#111; }
+  /* Sections */
+  section { position:relative; padding:40px 16px; }
+  section .container { position:relative; z-index:1; max-width:1100px; margin:0 auto; }
+  section.bg1::before, section.bg2::before {
+    content:''; position:absolute; inset:0; opacity:.28; filter:grayscale(.35);
+    background-position:center; background-size:cover; background-repeat:no-repeat;
+    transform:translateZ(0);
+  }
+  section.bg1::before { background-image:url('1000300789.jpg'); }
+  section.bg2::before { background-image:url('1000298593.jpg'); }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:14px; }
+  .card { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18); border-radius:16px; padding:16px; backdrop-filter:blur(6px); }
+  .card h3 { margin:0 0 6px; color:#fff; }
+  .small { color:#e6e6e6; font-size:13px; }
+  .price { font-size:22px; font-weight:800; color:var(--accent); }
+  /* Lead form */
+  .grid-2 { display:grid; grid-template-columns:1fr; gap:18px; }
+  @media (min-width:900px) { .grid-2 { grid-template-columns:1.05fr .95fr; } h1{font-size:46px} }
+  label, input, select, textarea { color:#000; }
+  input, select, textarea { width:100%; padding:12px; border-radius:10px; border:1px solid #ddd; }
+  footer { padding:24px 16px; border-top:1px solid rgba(255,255,255,.12); color:#ddd; text-align:center; }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="inner">
+    <h1>AutoSpa Express Guildford</h1>
+    <div class="sub"> Car  Detailing at your Doorstep</div>
+    <p style="margin-top:10px;font-size:18px">Mini & Full Valets • Deep Valet • Stage Polishing • <strong>Ceramic Coating + Warranty</strong></p>
+    <div class="cta">
+      <a class="btn gold" href="https://wa.me/447463875203" target="_blank" rel="noopener">WhatsApp 24/7</a>
+      <a class="btn" href="https://instagram.com/autospaexpressguildford" target="_blank" rel="noopener">@autospaexpressguildford</a>
+      <a class="btn" href="tel:+447463875203">Call</a>
+    </div>
+  </div>
+</header>
+
+<section class="bg1">
+  <div class="container">
+    <h2 style="margin-top:0">Core Services & Prices</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Mini Valet</h3>
+        <p class="price">£70 <span class="small">• up to 1.5h</span></p>
+        <p class="small">Quick exterior wash, wheels/arches, interior tidy, windows & vacuum.</p>
+      </div>
+      <div class="card">
+        <h3>Full Valet</h3>
+        <p class="price">£110 <span class="small">• 2–3h</span></p>
+        <p class="small">Complete clean inside & out: hand dry, carpets, door panels.</p>
+      </div>
+      <div class="card">
+        <h3>Deep Valet</h3>
+        <p class="price">£230 <span class="small">• 4–5h</span></p>
+        <p class="small">Decontamination, interior steam, engine bay clean, hydro sealant.</p>
+      </div>
+      <div class="card">
+        <h3>❄️ Winter Combo</h3>
+        <p class="price">£120</p>
+        <p class="small"><strong>Full Valet + Hydro Sealant</strong> — perfect for winter protection (seasonal).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg2">
+  <div class="container">
+    <h2 style="margin-top:0">Detailing • Polishing • Coatings</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Machine Polishing (Stage 1)</h3>
+        <p class="price">£280–£350</p>
+        <p class="small">Single-step polish removes 50–70% light defects — big gloss boost.</p>
+      </div>
+      <div class="card">
+        <h3>Machine Polishing (Stage 2)</h3>
+        <p class="price">£430–£500</p>
+        <p class="small">Two-step correction (80–95% defects). Deeper clarity & refinement.</p>
+      </div>
+      <div class="card">
+        <h3>Ceramic Coating + Warranty</h3>
+        <p class="price">£600–£750</p>
+        <p class="small">Ultra-gloss, hydrophobic protection. Written warranty + 6‑month top‑up in year 1.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="lead-form" class="bg1">
+  <div class="container">
+    <h2 style="margin-top:0">Get a Quick Quote</h2>
+    <p class="small">Fill this form — we’ll WhatsApp you within minutes.</p>
+    <form method="POST" action="https://script.google.com/macros/s/AKfycbyvZqqn4PJnjSLPUrDMwgw9ZBcO0DpVGblV41Yro4YnS8X3l7QaYffvd_4mUn3fQV-Mkw/exec" enctype="text/plain">
+      <div class="grid-2">
+        <div class="card" style="background:#fff;color:#000">
+          <label>First Name</label><br>
+          <input name="first_name" required>
+          <br><br>
+          <label>Phone (WhatsApp)</label><br>
+          <input name="phone" required placeholder="+44 7463 875203">
+          <br><br>
+          <label>Email</label><br>
+          <input name="email" type="email">
+          <br><br>
+          <label>Town / Postcode</label><br>
+          <input name="location" required>
+          <br><br>
+          <label>Vehicle (Make / Model)</label><br>
+          <input name="vehicle" required>
+        </div>
+        <div class="card" style="background:#fff;color:#000">
+          <label>Service Interested In</label><br>
+          <select name="service" required>
+            <option value="Mini Valet">Mini Valet (£70)</option>
+            <option value="Full Valet">Full Valet (£110)</option>
+            <option value="Deep Valet">Deep Valet (£230)</option>
+            <option value="Winter Combo">Winter Combo (Full Valet + Hydro Sealant) (£120)</option>
+            <option value="Machine Polishing (Stage 1)">Machine Polishing (Stage 1) (£280–£350)</option>
+            <option value="Machine Polishing (Stage 2)">Machine Polishing (Stage 2) (£430–£500)</option>
+            <option value="Ceramic Coating + Warranty">Ceramic Coating + Warranty (£600–£750)</option>
+          </select>
+          <br><br>
+          <label>Add-Ons (optional)</label><br>
+          <select name="addon">
+            <option value="">None</option>
+            <option value="Hydro Sealant Treatment">Hydro Sealant Treatment (£25)</option>
+            <option value="Clay Bar">Clay Bar (£60)</option>
+            <option value="Headlight Restoration">Headlight Restoration (£60)</option>
+            <option value="Engine Bay Detailing">Engine Bay Detailing (£60)</option>
+          </select>
+          <br><br>
+          <label>Preferred Date & Time</label><br>
+          <input name="preferred" placeholder="e.g., Tue 11 AM">
+          <br><br>
+          <label>Notes</label><br>
+          <textarea name="notes" rows="5" placeholder="Access info, special requests..."></textarea>
+          <br><br>
+          <label><input type="checkbox" name="whatsapp_opt_in" required> I agree to be contacted by WhatsApp/SMS about my booking.</label>
+          <p class="small" style="color:#555">By submitting, you agree to our privacy policy. Replace this with your policy URL.</p>
+          <button type="submit" class="btn gold">Get My Quote</button>
+          <a class="btn" href="https://wa.me/447463875203" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © AutoSpa Express Guildford. 
+    • <a href="mailto:autospaexpressguildford@gmail.com">autospaexpressguildford@gmail.com</a>
+    • <a href="https://instagram.com/autospaexpressguildford" target="_blank" rel="noopener">@autospaexpressguildford</a>
+    • <a href="https://wa.me/447463875203" target="_blank" rel="noopener">WhatsApp</a> • <a href="#" id="privacy-link">Privacy Policy</a>
+  </div>
+</footer>
+
+<!-- Privacy roll-down panel -->
+<style>
+  #privacy-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,.55); opacity:0; visibility:hidden; transition:opacity .25s ease, visibility .25s ease; z-index: 9998;
+  }
+  #privacy-panel {
+    position: fixed; left:0; right:0; top:0; max-height:80vh; overflow:auto;
+    background:#0b0b0b; color:#fff; border-bottom:1px solid rgba(255,255,255,.15);
+    transform: translateY(-110%); transition: transform .35s ease; z-index: 9999;
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+  }
+  #privacy-panel .inner { max-width:900px; margin:0 auto; padding:28px 16px 36px; }
+  #privacy-panel h2 { margin:0 0 6px; }
+  #privacy-panel p, #privacy-panel li { color:#e6e6e6; }
+  #privacy-close { position:absolute; right:16px; top:12px; background:#fff; color:#000; border:none; padding:8px 12px; border-radius:10px; cursor:pointer; font-weight:700; }
+  .privacy-open #privacy-overlay { opacity:1; visibility:visible; }
+  .privacy-open #privacy-panel { transform: translateY(0); }
+</style>
+<div id="privacy-overlay"></div>
+<div id="privacy-panel" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
+  <button id="privacy-close" aria-label="Close">Close</button>
+  <div class="inner">
+    <h2 id="privacy-title">Privacy Policy</h2>
+    <p><strong>Last updated:</strong> 5 October 2025</p>
+    <p>AutoSpa Express Guildford (“we”, “us”, “our”) provides premium mobile car detailing across Surrey. We respect your privacy and are committed to protecting your personal data.</p>
+    <h3>1) Who we are</h3>
+    <ul>
+      <li><strong>Business name:</strong> AutoSpa Express Guildford</li>
+      <li><strong>Owners:</strong> Gavin Joseph &amp; Amal Roy</li>
+      <li><strong>Contact:</strong> <a href="mailto:autospaexpressguildford@gmail.com">autospaexpressguildford@gmail.com</a> • <a href="https://wa.me/447463875203" target="_blank" rel="noopener">+44 7463 875203</a></li>
+      <li><strong>Location:</strong> Guildford, Surrey, United Kingdom</li>
+    </ul>
+    <h3>2) The data we collect</h3>
+    <p>When you contact us or complete our enquiry/booking form, we may collect your name, phone (including WhatsApp), email, town/postcode and address (if provided), vehicle details, service interest, preferred date/time, and notes.</p>
+    <h3>3) How we use your data (purpose)</h3>
+    <p>We use your details <strong>only</strong> to contact you about our services: quotes, booking confirmations and reminders, invoices/receipts, after-care, and feedback related to work we performed. We do not sell your data.</p>
+    <h3>4) Legal bases (UK GDPR)</h3>
+    <ul>
+      <li>Performance of a contract / steps prior to a contract</li>
+      <li>Consent (e.g., WhatsApp/SMS or email messaging)</li>
+      <li>Legitimate interests (reasonable follow-ups)</li>
+    </ul>
+    <h3>5) Sharing & international transfers</h3>
+    <p>We may use trusted service providers (email, hosting, WhatsApp) who act on our instructions and keep data secure. If data is stored outside the UK/EEA, we use appropriate safeguards.</p>
+    <h3>6) Data retention</h3>
+    <p>We retain enquiry and booking records for up to <strong>24 months</strong> after your last interaction unless required longer by law, after which we delete or anonymise them.</p>
+    <h3>7) Your rights</h3>
+    <p>You can request access, correction, deletion, restriction/object, data portability, and withdraw consent at any time by emailing <a href="mailto:autospaexpressguildford@gmail.com">autospaexpressguildford@gmail.com</a>. You may also complain to the <a href="https://ico.org.uk" target="_blank" rel="noopener">Information Commissioner’s Office</a>.</p>
+    <h3>8) Security</h3>
+    <p>We use reasonable technical and organisational measures to protect your information.</p>
+    <h3>9) Cookies & tracking</h3>
+    <p>Our site currently runs without cookies. If we add analytics/advertising tools (e.g., Meta Pixel), we will update this policy and provide a cookie notice with controls.</p>
+    <h3>10) Updates</h3>
+    <p>We may update this policy periodically. The latest version will always be available via this link.</p>
+  </div>
+</div>
+<script>
+  (function(){
+    const body = document.body;
+    const link = document.getElementById('privacy-link');
+    const overlay = document.getElementById('privacy-overlay');
+    const panel = document.getElementById('privacy-panel');
+    const close = document.getElementById('privacy-close');
+    function openPrivacy(e){ e && e.preventDefault(); body.classList.add('privacy-open'); }
+    function closePrivacy(e){ e && e.preventDefault(); body.classList.remove('privacy-open'); }
+    if(link) link.addEventListener('click', openPrivacy);
+    if(close) close.addEventListener('click', closePrivacy);
+    if(overlay) overlay.addEventListener('click', closePrivacy);
+    window.addEventListener('keydown', function(e){ if(e.key==='Escape') closePrivacy(e); });
+  })();
+</script>
+
+
+<script>
+  (function(){
+    var r = document.getElementById('redir');
+    if(r){ r.value = window.location.origin + '/thank-you.html'; }
+  })();
+</script>
+
+</body>
+</html>
